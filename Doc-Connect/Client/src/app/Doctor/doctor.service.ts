@@ -2,7 +2,7 @@ import { HttpClient, HttpErrorResponse } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable, catchError } from 'rxjs';
 import { Doctor } from '../models/doctor';
-import { environment } from 'src/environments/environment.prod';
+import { environment } from '../../../environment.prod';
 
 @Injectable({
   providedIn: 'root'
