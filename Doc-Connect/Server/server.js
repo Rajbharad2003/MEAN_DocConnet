@@ -71,9 +71,9 @@ async function myFunction() {
 //   timezone: "Asia/Kolkata"
 // });
 
-cron.schedule('59 23 * * *', () => {
-  myFunction();
-});
+// cron.schedule('59 23 * * *', () => {
+//   myFunction();
+// });
 
 
 // job.start();
@@ -90,7 +90,7 @@ app.use(express.static("./dist/client"));
 app.use(bodyParser.json({ limit: '10mb' }));
 //console.log("hello");
 const corsOptions = {
-    origin: 'https://devanshu1010.github.io', // Replace with your Angular app's URL http://localhost:4200
+    origin: process.env.FRONTEND_APP, // Replace with your Angular app's URL http://localhost:4200
     methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
     credentials: true,
     optionsSuccessStatus: 204,
